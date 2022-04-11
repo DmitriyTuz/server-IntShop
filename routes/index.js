@@ -8,6 +8,7 @@ const basketRouter = require('./basketRouter')
 const basket_deviceRouter = require('./basket_deviceRouter')
 const ratingRouter = require('./ratingRouter')
 const device_infoRouter = require('./device_infoRouter')
+const testRouter = require('./testRouter')
 
 const chatRouter = require('./chatRouter')
 
@@ -21,5 +22,6 @@ router.use('/rating', ratingRouter)
 router.use('/device_info', device_infoRouter)
 
 router.use('/chat', chatRouter)
+router.use('/test', testRouter)
 
 module.exports = router
