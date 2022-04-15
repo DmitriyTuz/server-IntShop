@@ -22,7 +22,10 @@
     "protocol":"postgres",
     "port": "5432",
     "dialectOptions": {
-      "ssl": true
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
     }
   }
 }
