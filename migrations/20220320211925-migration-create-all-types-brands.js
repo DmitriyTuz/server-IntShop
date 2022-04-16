@@ -2,13 +2,13 @@
 
 const { User } = require('../models/index')
 
-/*const userM = require('../models-mongo/userM')
-const Baskets = require('../models-mongo/Baskets')*/
+const userM = require('../models-mongo/userM')
+const Baskets = require('../models-mongo/Baskets')
 
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-/*    let users = await User.findAll();
+    let users = await User.findAll();
 
     console.log('***users = ', users);
     console.log('***users = ', users[0].name);
@@ -22,9 +22,9 @@ module.exports = {
 
      };
 
-       await Baskets.create({name: 'basket1'});
-       await Baskets.create({name: 'basket2'});
-       // await Baskets.update({})*/
+//       await Baskets.create({name: 'basket1'});
+//       await Baskets.create({name: 'basket2'});
+       // await Baskets.update({})
 
     /*
     await Type.create({ name: 'Холодильники'}),
