@@ -2,16 +2,16 @@
 
 const { User } = require('../models/index')
 
-const userM = require('../models-mongo/userM')
+/*const userM = require('../models-mongo/userM')
 const Baskets = require('../models-mongo/Baskets')
 
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const Schema = mongoose.Schema;*/
 
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-      let users = await userM.find();
+  /*    let users = await userM.find();
       let baskets = await Baskets.find();
 
     // console.log('***user = ', users);
@@ -24,10 +24,10 @@ module.exports = {
 
       for (let i = 0; i <= baskets.length - 1; i++) {
           await Baskets.deleteOne({name: baskets[i].name});
-      }
+      }*/
 
-      /*    await User.create({ name: 'Dima', email: 'dim@mail.ru', password: '111'});
-      await User.create({ name: 'Alexey', email: 'al@mail.ru', password: '222'});*/
+      await User.create({ name: 'Dima', email: 'dim@mail.ru', password: '111'});
+      await User.create({ name: 'Alexey', email: 'al@mail.ru', password: '222'});
 
       /*    let user = await userM.find();
 
