@@ -1,1 +1,1 @@
-web: npm i && npm start
+web: npm i && heroku run npx sequelize-cli db:migrate && npm start
