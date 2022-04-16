@@ -8,11 +8,11 @@ const Baskets = require('../models-mongo/Baskets')
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-    let users = await User.findAll();
+/*    let users = await User.findAll();
 
     console.log('***users = ', users);
     console.log('***users = ', users[0].name);
-    console.log('***usersLength = ', users.length);
+    console.log('***usersLength = ', users.length);*/
 
 /*     for ( let i = 0; i <= users.length - 1; i++ ) {
        await userM.create({name: users[i].name, email: users[i].email}, function (err, results) {
