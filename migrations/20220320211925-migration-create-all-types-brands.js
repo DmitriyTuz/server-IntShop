@@ -1,6 +1,6 @@
 'use strict';
 
-const { User } = require('../models/index')
+const { User, Type, Brand } = require('../models/index')
 
 const userM = require('../models-mongo/userM')
 const Baskets = require('../models-mongo/Baskets')
