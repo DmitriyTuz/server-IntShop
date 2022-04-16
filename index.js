@@ -34,14 +34,14 @@ app.use(errorHandler)
 
 const start = async () => {
     try {
-        /*await sequelize.authenticate()
+        await sequelize.authenticate()
         await sequelize.sync()
 
         mongoose.connect("mongodb://localhost:27017/usersdb", { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }, function(err) {
-            if (err) return console.log(err);*/
+            if (err) return console.log(err);
 
             server.listen(PORT, () => console.log(`Server started on port ${PORT}`))
-        // });
+         });
 
 
     } catch (e) {
