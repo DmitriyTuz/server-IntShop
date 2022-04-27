@@ -12,13 +12,15 @@ const db = {};
 
 let sequelize;
  console.log('1', config);
- if (config) {
-   sequelize = new Sequelize(config);
-     console.log('2', sequelize);
- } else {
-   sequelize = new Sequelize(config.database, config.username, config.password, config);
-     console.log('3', sequelize);
- }
+ // if (config) {
+ //   sequelize = new Sequelize(config);
+ //     console.log('2', sequelize);
+ // } else {
+ //   sequelize = new Sequelize(config.database, config.username, config.password, config);
+ //     console.log('3', sequelize);
+ // }
+
+sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 fs.readdirSync(__dirname).filter(file =>
     (file.indexOf('.') !== 0) &&
