@@ -11,7 +11,7 @@ const db = {};
 
 
 let sequelize;
- console.log('1', config);
+ // console.log('1', config);
  // if (config) {
  //   sequelize = new Sequelize(config);
  //     console.log('2', sequelize);
