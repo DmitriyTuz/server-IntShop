@@ -34,9 +34,9 @@ app.use(errorHandler)
 
 
  const start = async () => {
-//     try {
-//          await sequelize.authenticate()
-//          await sequelize.sync()
+     try {
+         await sequelize.authenticate()
+         await sequelize.sync()
 //
 //         mongoose.connect("mongodb://localhost:27017/usersdb", { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }, function(err) {
 //             if (err) return console.log(err);
@@ -45,9 +45,9 @@ app.use(errorHandler)
 //          });
 //
 //
-//     } catch (e) {
-//         console.log(e)
-//     }
+    } catch (e) {
+        console.log(e)
+    }
  }
 //
 //
