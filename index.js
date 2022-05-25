@@ -11,18 +11,12 @@ const router = require('./routes/index')
 const errorHandler = require('./middleware/ErrorHandlingMiddleware')
 const path = require('path')
 const http = require("http");
-const socketio = require('socket.io');
-
-const { connectSocket } = require('./controllers/chatController');
 
 const PORT = process.env.PORT || 5000
 
 const app = express()
 
 const server = http.createServer(app);
-const io = socketio(server);
-
-connectSocket(io);
 
 app.use(cors())
 app.use(express.json())
@@ -35,8 +29,8 @@ app.use(errorHandler)
 
  const start = async () => {
      try {
-         await sequelize.authenticate()
-//                      await sequelize.sync()
+//         await sequelize.authenticate()
+//         await sequelize.sync()
 //
 //         mongoose.connect("mongodb://localhost:27017/usersdb", { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }, function(err) {
 //             if (err) return console.log(err);
