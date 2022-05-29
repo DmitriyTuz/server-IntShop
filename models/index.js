@@ -5,12 +5,16 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+// const config = require(__dirname + '/../config/config.js')[env];
+const config = require(__dirname + '/../config/config.js');
 const db = {};
 
 
 
 let sequelize;
+
+console.log('env variables : ' , config);
+sequelize = new Sequelize(config);
  // console.log('1', config);
  // if (config) {
  //   sequelize = new Sequelize(config);
@@ -20,7 +24,7 @@ let sequelize;
  //     console.log('3', sequelize);
  // }
 
-sequelize = new Sequelize(config.database, config.username, config.password, config);
+// sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 fs.readdirSync(__dirname).filter(file =>
     (file.indexOf('.') !== 0) &&
