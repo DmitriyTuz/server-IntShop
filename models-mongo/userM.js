@@ -1,7 +1,10 @@
-mongoose = require('mongoose');
+var mongoose = require('mongoose');
+
+const uri = process.env.MONGODB_URI;
+
 var Schema = mongoose.Schema;
 if (mongoose.connection.readyState === 0) {
-   mongoose.connect('mongodb://localhost:27017/usersdb', { useNewUrlParser: true, useUnifiedTopology: true });
+   mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 }
 
 

@@ -14,6 +14,8 @@ const http = require("http");
 
 const PORT = process.env.PORT || 5000
 
+const uri = process.env.MONGODB_URI;
+
 const app = express()
 
 const server = http.createServer(app);
@@ -32,11 +34,11 @@ app.use(errorHandler)
 //         await sequelize.authenticate()
 //         await sequelize.sync()
 //
-//         mongoose.connect("mongodb://localhost:27017/usersdb", { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }, function(err) {
-//             if (err) return console.log(err);
+         mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }, function(err) {
+             if (err) return console.log(err);
 //
              server.listen(PORT, () => console.log(`Server started on port ${PORT}`))
-//          });
+          });
 //
 //
     } catch (e) {
