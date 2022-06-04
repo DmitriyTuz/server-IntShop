@@ -1,6 +1,10 @@
+//require('dotenv').config()
+
 var mongoose = require('mongoose');
 
 const uri = process.env.MONGODB_URI;
+
+console.log('*555*', uri);
 
 var Schema = mongoose.Schema;
 if (mongoose.connection.readyState === 0) {
