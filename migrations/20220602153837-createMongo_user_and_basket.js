@@ -11,7 +11,7 @@ module.exports = {
     let users = await User.findAll();
     for ( let i = 0; i <= users.length - 1; i++ ) {
       await userM.create({name: users[i].name, email: users[i].email})
-
+//
     };
 
   },
